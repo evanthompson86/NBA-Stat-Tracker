@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Top Current Basketball Players</h1>
+<h2>Most Points per game:</h2>
+<ul>
+  {% for point in points %}
+      <li>{{ point.name }}: {{ point.ppg }} points per game</li>
+  {% endfor %}
+</ul>
+<h2>Most Assists per game</h2>
+<ul>
+  {% for assist in assists %}
+      <li>{{ assist.name }}: {{ assist.apg }} assists per game</li>
+  {% endfor %}
+</ul>
+<h2>Most Offensive Rebounds per game</h2>
+<ul>
+  {% for offensive in offensives %}
+      <li>{{ offensive.name }}: {{ offensive.orpg }} offensive rebounds per game</li>
+  {% endfor %}
+</ul>
+<h2>Most Deffensive Rebounds per game</h2>
+<ul>
+  {% for deffensive in defensives %}
+      <li>{{ deffensive.name }}: {{ deffensive.drpg }} defensive rebounds per game</li>
+  {% endfor %}
+</ul>
+<p>Created by Evan Thompson.</p>
+
+</body>
+</html>
